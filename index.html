@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Elzatona Nurse - بوابة الدخول</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f0f2f5;
+      text-align: center;
+      padding-top: 100px;
+      user-select: none;
+    }
+
+    h1 {
+      color: #222;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+      background-color: #0a7cff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #095ecf;
+    }
+  </style>
+
+  <script>
+    // منع الكليك يمين
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // منع الكيبورد لعرض الكود (Ctrl+U, F12)
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123 || // F12
+          (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || // Ctrl+Shift+I
+          (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) { // Ctrl+U
+        return false;
+      }
+    }
+
+    function openGPT() {
+      const url = "https://chatgpt.com/g/g-67fc463b6a48819181615468e2847796-elzatona-gpt";
+      window.open(url, "_blank");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>مرحباً بيك في بوابة Elzatona Nurse</h1>
+  <p>علشان تبدأ، اضغط الزر تحت:</p>
+  <button onclick="openGPT()">ابدأ المذاكرة</button>
+</body>
+</html>
